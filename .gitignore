@@ -1,0 +1,112 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.next/
+.nuxt/
+.svelte-kit/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Local tooling caches
+.cache/
+.turbo/
+.parcel-cache/
+.vite/
+
+# Data: keep directory placeholders, ignore generated/large datasets
+data/raw/*
+data/processed/*
+data/interim/*
+data/indexes/*
+data/exports/*
+!data/**/.gitkeep
+!data/**/README.md
+data/*
+# Search engine artifacts
+*.index
+*.idx
+*.faiss
+*.ann
+*.hnsw
+*.sqlite
+*.sqlite3
+*.db
+
+# Model and embedding artifacts
+models/
+embeddings/
+checkpoints/
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Reports generated from experiments
+reports/**/*.html
+reports/**/*.pdf
+reports/**/*.png
+reports/**/*.jpg
+reports/**/*.jpeg
+reports/**/*.svg
+reports/**/*.csv
+reports/**/*.xlsx
+!reports/**/.gitkeep
+!reports/**/README.md
+
+# Logs and runtime files
+logs/
+*.log
+*.pid
+*.tmp
+*.temp
+
+# Docker and local volumes
+docker-data/
+volumes/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo

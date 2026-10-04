@@ -1,0 +1,37 @@
+# GPU-ready requirements for Vietnamese News Search Engine
+# IMPORTANT: On Windows prefer installing CUDA-enabled PyTorch and FAISS via conda
+# before running pip. Example (CUDA 11.8):
+#   conda create -n searchengine-gpu python=3.10 -y
+#   conda activate searchengine-gpu
+#   conda install -c pytorch -c nvidia pytorch torchvision torchaudio cudatoolkit=11.8 -y
+#   conda install -c conda-forge faiss-cuda cudatoolkit=11.8 -y
+# Common ML / utils
+#   conda install -c conda-forge numpy pandas pyarrow scikit-learn scipy jupyter ipykernel tqdm -y
+# After the conda installs, run:
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements-cpu.txt
+#
+# NOTE: Installing CUDA-enabled torch via pip on Windows is not recommended;
+# use the official conda channels above. If you must use pip, follow the
+# instructions on https://pytorch.org for the correct wheel.
+
+# Core backend/runtime
+fastapi
+uvicorn[standard]
+pytest
+httpx
+
+# Data / ML (GPU-ready). Skip `torch`/`faiss-cuda` here if you installed them via conda.
+numpy>=1.24
+pandas>=2.0
+pyarrow
+# faiss-cuda (install via conda-forge; included here as a placeholder)
+# PyTorch: prefer conda install (see top notes). If using pip, pip will try to install the CPU wheel.
+torch
+transformers>=4.30
+tqdm
+scikit-learn
+scipy
+
+# Optional: VNCoreNLP (requires Java/JDK and pyjnius)
+# py_vncorenlp
